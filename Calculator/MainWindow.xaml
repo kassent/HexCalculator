@@ -1,0 +1,75 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="HexCalculator" Height="491" Width="400" ResizeMode="CanMinimize" Icon="D:\desktop\UC脚本备份\图标\icon\1409564702_34650.ico">
+    <Grid Margin="0,-1,0,0">
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="95*"/>
+            <RowDefinition Height="224*"/>
+        </Grid.RowDefinitions>-->
+        <DockPanel d:IsHidden="True">
+            <TextBox TextWrapping="Wrap" Background="AliceBlue" Opacity="0.995" DockPanel.Dock="Right" d:IsHidden="True"/>
+        </DockPanel>
+        <TextBox x:Name="contentBox" HorizontalAlignment="Left" Height="97" TextWrapping="Wrap" VerticalAlignment="Top" Width="394" Opacity="0.8" TextAlignment="Right" BorderThickness="0,1,0,0"/>
+        <Label x:Name="topContent" Content="" Margin="90,10,0,0" Width="294" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Panel.ZIndex="10" Height="35" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="bottomContent" Content="0" Margin="89,53,0,0" Width="295" VerticalAlignment="Top" HorizontalAlignment="Left" FlowDirection="RightToLeft" Panel.ZIndex="10" Height="35" FontSize="24" FontWeight="Bold"/>
+
+        <Label x:Name="commandContent" Content="" HorizontalAlignment="Left" Margin="33,53,0,0" VerticalAlignment="Top" Width="45" Height="35" FontSize="24" FontWeight="Bold"/>
+
+        <Grid HorizontalAlignment="Left" Height="368" Margin="-1,93,0,0" VerticalAlignment="Top" Width="395">
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" x:Name="buttonD" Content="D" Click="buttonD_Click" FontSize="22"/>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="buttonE" Content="E" Click="buttonE_Click" FontSize="22"/>
+                <Button Grid.Row="0" Grid.Column="2" x:Name="buttonF" Content="F" Click="buttonF_Click" FontSize="22"/>
+
+                <Button Grid.Row="0" Grid.Column="3" x:Name="buttonClear" Content="~" Click="buttonClear_Click" FontSize="22"/>
+
+                <Button Grid.Row="1" Grid.Column="0" x:Name="buttonA" Content="A" Click="buttonA_Click" FontSize="22"/>
+                <Button Grid.Row="1" Grid.Column="1" x:Name="buttonB" Content="B" Click="buttonB_Click" FontSize="22"/>
+                <Button Grid.Row="1" Grid.Column="2" x:Name="buttonC" Content="C" Click="buttonC_Click" FontSize="22"/>
+                <Button Grid.Row="1" Grid.Column="3" x:Name="buttonAdd" Content="+" Click="buttonAdd_Click" FontSize="22"/>
+
+                <Button Grid.Row="2" Grid.Column="0" x:Name="buttonSeven" Content="7" Click="buttonSeven_Click" FontSize="22"/>
+                <Button Grid.Row="2" Grid.Column="1" x:Name="buttonEight" Content="8" Click="buttonEight_Click" FontSize="22"/>
+                <Button Grid.Row="2" Grid.Column="2" x:Name="buttonNine" Content="9" Click="buttonNine_Click" FontSize="22"/>
+                <Button Grid.Row="2" Grid.Column="3" x:Name="buttonSub" Content="-" Click="buttonSub_Click" FontSize="22"/>
+
+                <Button Grid.Row="3" Grid.Column="0" x:Name="buttonFour" Content="4" Click="buttonFour_Click" FontSize="22"/>
+                <Button Grid.Row="3" Grid.Column="1" x:Name="buttonFive" Content="5" Click="buttonFive_Click" FontSize="22"/>
+                <Button Grid.Row="3" Grid.Column="2" x:Name="buttonSix" Content="6" Click="buttonSix_Click" FontSize="22"/>
+                <Button Grid.Row="3" Grid.Column="3" x:Name="buttonReverse" Content="！" Click="buttonReverse_Click" FontSize="22"/>
+
+                <Button Grid.Row="4" Grid.Column="0" x:Name="buttonOne" Content="1" Click="buttonOne_Click" FontSize="22"/>
+                <Button Grid.Row="4" Grid.Column="1" x:Name="buttonTwo" Content="2" Click="buttonTwo_Click" FontSize="22"/>
+                <Button Grid.Row="4" Grid.Column="2" x:Name="buttonThree" Content="3" Click="buttonThree_Click" FontSize="22"/>
+                <Button Grid.Row="4" Grid.RowSpan="2" Grid.Column="3" x:Name="buttonEqual" Content="=" Click="buttonEqual_Click" FontSize="22" Background="Orange"/>
+
+
+                <Button Grid.Row="5" Grid.Column="0" x:Name="buttonZero" Content="0" Click="buttonZero_Click" FontSize="22"/>
+                <Button Grid.Row="5" Grid.Column="1" x:Name="buttonMul" Content="*" Click="buttonMul_Click" FontSize="22"/>
+                <Button Grid.Row="5" Grid.Column="2" x:Name="buttonDiv" Content="/" Click="buttonDiv_Click" FontSize="22"/>
+            </Grid>
+
+        </Grid>
+        <Label x:Name="errorContent" Content="" HorizontalAlignment="Left" Margin="5,13,0,0" VerticalAlignment="Top" Height="35" FontWeight="Bold" FontSize="20" Width="82"/>
+
+    </Grid>
+</Window>
